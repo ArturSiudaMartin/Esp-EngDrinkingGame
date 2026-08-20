@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+<title>🔥 Truth or Drink</title>
+<link rel="stylesheet" href="style.css">
+
+<!-- Home screen / PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d0510">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Truth or Drink">
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="flame">🔥</span>
+      <h1 data-i18n="title">Truth or Drink</h1>
+    </div>
+    <button id="langToggle" class="lang-btn" aria-label="Switch language">
+      <span id="langLabel">ES</span>
+    </button>
+  </header>
+
+  <nav class="modes" id="modeNav">
+    <button class="mode-btn active" data-mode="wyr" data-i18n="mode_wyr">Would You Rather</button>
+    <button class="mode-btn" data-mode="tod" data-i18n="mode_tod">Truth or Dare</button>
+    <button class="mode-btn" data-mode="drink" data-i18n="mode_drink">Truth or Drink</button>
+  </nav>
+
+  <main class="stage">
+    <div class="card-wrap">
+      <div class="tag" id="cardTag">🍸 WOULD YOU RATHER</div>
+      <div class="card" id="card">
+        <p id="cardText">Tap "Next" to start the game.</p>
+      </div>
+      <div class="tod-choice" id="todChoice">
+        <button class="choice-btn truth" id="btnTruth" data-i18n="truth">Truth</button>
+        <button class="choice-btn dare" id="btnDare" data-i18n="dare">Dare</button>
+      </div>
+    </div>
+
+    <button id="nextBtn" class="next-btn" data-i18n="next">🎲 Next</button>
+
+    <div class="counter">
+      <span data-i18n="sips">Sips taken</span>: <span id="sipCount">0</span>
+      <button id="sipBtn" class="sip-btn" aria-label="add sip">🥃 +1</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p class="disclaimer" data-i18n="disclaimer">18+. Drink responsibly, respect consent, and know your limits.</p>
+  </footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
